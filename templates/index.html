@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Detector</h2>
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+	
+    
+</div>
+<body>
+Note:
+<ul>
+<li><b style="color:red;">The suitability of this deep learning model for clinical use has not been validated. Therefore it cannot be used for any clinical purpose! It can be used for research purposes and for comparison with other similar models.</b></li>
+</ul>
+</body>
+<div class='footer'>
+    	<div class="contact">
+               <a target="_blank" href="https://github.com/vanithah"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/vanitha-h-ba3a631a0/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+    	<p class='footer-description'>By Vanitha H</p>
+</div>
+{% endblock %}
